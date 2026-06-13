@@ -95,7 +95,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #0C0A09;
+  --background: #0F172A;
   --foreground: #FAFAF9;
   --card: #1C1917;
   --card-foreground: #FAFAF9;
@@ -108,7 +108,7 @@
   --muted: #292524;
   --muted-foreground: #A8A29E;
   --accent: #34D399;
-  --accent-foreground: #0C0A09;
+  --accent-foreground: #0F172A;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
   --border: #292524;
