@@ -46,7 +46,7 @@ export const SITE_CONFIG = {
   socialLinks: [
     {
       text: "Resume",
-      href: "/Vasuki_G.docx",
+      href: "/Vasuki_G_resume.pdf",
       icon: FaFileAlt,
     },
     {
@@ -61,7 +61,7 @@ export const SITE_CONFIG = {
     },
   ],
   menuItems: [
-    { label: "Resume", href: "/Vasuki_G.docx" },
+    { label: "Resume", href: "/Vasuki_G_resume.pdf" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
