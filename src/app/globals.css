@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --text-xs: 0.875rem;
+  --text-xs--line-height: 1.125rem;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.625rem;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 1.813rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.125rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.375rem;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 2.688rem;
+  --text-5xl: 2.5rem;
+  --text-5xl--line-height: 3rem;
+  --text-6xl: 3rem;
+  --text-6xl--line-height: 3.625rem;
+  --text-7xl: 3.75rem;
+  --text-7xl--line-height: 1;
+  --text-8xl: 4.5rem;
+  --text-8xl--line-height: 4.875rem;
+  --text-9xl: 6rem;
+  --text-9xl--line-height: 6.625rem;
+
+  --animate-slide-in: slide-in 600ms ease both;
+
+  @keyframes slide-in {
+    10% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@theme inline {
+  --font-nougat: var(--font-nougat);
+  --font-payback: var(--font-payback);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #0C0A09;
+  --foreground: #FAFAF9;
+  --card: #1C1917;
+  --card-foreground: #FAFAF9;
+  --popover: #1C1917;
+  --popover-foreground: #FAFAF9;
+  --primary: #10B981;
+  --primary-foreground: #FFFFFF;
+  --secondary: #0F766E;
+  --secondary-foreground: #FFFFFF;
+  --muted: #292524;
+  --muted-foreground: #A8A29E;
+  --accent: #34D399;
+  --accent-foreground: #0C0A09;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #292524;
+  --input: #44403C;
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: #0F766E;
+  --chart-3: #34D399;
+  --chart-4: #6EE7B7;
+  --chart-5: #A7F3D0;
+  --sidebar: #1C1917;
+  --sidebar-foreground: #FAFAF9;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #292524;
+  --sidebar-accent-foreground: #34D399;
+  --sidebar-border: #292524;
+  --sidebar-ring: #10B981;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-nougat);
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary leading-snug;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold text-primary;
+  }
+
+  h4 {
+    @apply text-lg font-semibold text-primary;
+  }
+
+  h5,
+  h6 {
+    @apply text-base font-medium text-primary;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
