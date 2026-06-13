@@ -9,6 +9,7 @@ import {
   IconMoodSmile,
   IconDeviceDesktop,
   IconBriefcase,
+  IconTrophy,
 } from "@tabler/icons-react";
 import { Comfortaa } from "next/font/google";
 
@@ -46,6 +47,13 @@ const NavBar = () => {
         <IconDeviceDesktop className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#projects",
+    },
+    {
+      title: "Achievements",
+      icon: (
+        <IconTrophy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#achievements",
     },
     {
       title: "Education",

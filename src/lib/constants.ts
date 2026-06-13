@@ -417,4 +417,12 @@ export const SITE_CONTENT = {
       by: "Peer, Karunya Institute of Technology",
     },
   ],
+  achievements: [
+    {
+      title: "3rd Place — Technoverse Hackathon",
+      organization: "Cognizant",
+      description:
+        "Secured 3rd place in the Technoverse hackathon organized by Cognizant, competing against multiple teams to deliver an innovative technical solution.",
+    },
+  ],
 };

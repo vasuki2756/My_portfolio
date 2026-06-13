@@ -9,6 +9,7 @@ import { SITE_CONTENT } from "@/lib/constants";
 const Hero = dynamic(() => import("@/app/(home)/_components/Hero"));
 const About = dynamic(() => import("@/app/(home)/_components/About"));
 const Skills = dynamic(() => import("@/app/(home)/_components/Skills"));
+const Achievements = dynamic(() => import("@/app/(home)/_components/Achievements"));
 const ExperienceTabs = dynamic(() => import("@/app/(home)/_components/ExperienceTabs"));
 const Projects = dynamic(() =>
   import("@/app/(home)/_components/Projects").then((m) => m.Projects),
@@ -35,6 +36,7 @@ export default function Home() {
         <Hero {...SITE_CONTENT.hero} />
         <About />
         <Skills skills={sanitizedSkills} />
+        <Achievements />
         <ExperienceTabs
           experiences={SITE_CONTENT.experience}
           education={SITE_CONTENT.education}
